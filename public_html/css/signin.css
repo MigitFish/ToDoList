@@ -1,0 +1,22 @@
+.fancy {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 32px;
+}
+body {
+    display:  flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main{
+    flex: 1 0 auto;
+}
+.fancyier {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 64px;
+}
+.move {
+    padding-top: 500px;
+}
+header {
+    border-bottom: 5px solid black;
+}
