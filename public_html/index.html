@@ -27,7 +27,7 @@
         <main class="grey lighten-2">
             <div class="container">
                 <div class="row">
-                    <h1 class="center-align fancy">To Do</h1>
+                    <h1 class="center-align supa">To Do</h1>
                 </div>
                 <div class="row">
                     <div class="col s12 main-container">
@@ -39,10 +39,11 @@
         <footer class="page-footer green lighten-1">
             <div class="container">
                 <p><a href="index.html"><img style="padding-left: 800px; position: relative; display: block;
-                                             bottom: 0;
-                                             right: 0;
+                                             bottom: 10px;
+                                             right: 10px;
                                              position: absolute;
-                                             z-index: 1; " src="img/back-to-top.png" alt="OUSHD"/></a></p>
+                                             z-index: 2;
+                                             position: fixed;" src="img/back-to-top.png" alt="OUSHD"/></a></p>
                 
             </div>
             <div class="footer-copyright center-align">
@@ -57,7 +58,18 @@
         <script type="text/javascript" src="libs/backendless.js"></script>
         <script type="text/javascript" src="js/ToDo.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
         <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js'></script>
+        <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
+
+        <script id="blogs-template" type="text/x-handlebars-template">
+            {{#each posts}}
+                <div class="blog-post">
+                    <h2 class="blog-post-title fancyier">{{title}}</h2>
+                    <p class="blog-post-meta fancy">At {{format created }} by {{authorEmail}}</p>
+                    <div class="fancy">{{{content}}}</div>
+            <button class="material-icon trash" type="submit" name="action" data={{objectId}}>Delete</button>
+                </div>
+            {{/each}}
+        </script>
     </body>
 </html>

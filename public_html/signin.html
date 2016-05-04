@@ -13,7 +13,7 @@
     <body>
         <header>
             <nav>
-                <div class="nav-wrapper orange darken-2">
+                <div class="nav-wrapper green lighten-1">
                     <a href="#" class="brand-logo center fancy ">To Do List</a>
                     <ul class="left">
                         <li><a href="index.html">Home</a></li>
@@ -27,23 +27,24 @@
         <main class="grey lighten-2">
             <div class="container">
                 <div class="row">
-                    <h1 class="center-align fancyier">To Do</h1>
+                    <h1 class="center-align supa">To Do</h1>
                 </div>
                 <div class="row">
                     <div class="col s12 main-container">
 
                     </div>
-                </div>
+                    </div>
             </div>
         </main>
-        <footer class="page-footer orange darken-2">
-            <div class="container center-align ">
-                <p><a href="signin.html"><img style="padding-left: 800px; position: relative; display: block;
-                                             bottom: 0;
-                                             right: 0;
+        <footer class="page-footer green lighten-1">
+            <div class="container">
+                <p><a href="index.html"><img style="padding-left: 800px; position: relative; display: block;
+                                             bottom: 10px;
+                                             right: 10px;
                                              position: absolute;
-                                             z-index: 1; "  src="img/back-to-top.png" alt=""/></a></p>
-
+                                             z-index: 2;
+                                             position: fixed;" src="img/back-to-top.png" alt="OUSHD"/></a></p>
+                
             </div>
             <div class="footer-copyright center-align">
                 <div class="contianer">
@@ -55,9 +56,72 @@
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="libs/backendless.js"></script>
-        <script type="text/javascript" src="js/ToDo.js"></script>
+        <script type="text/javascript" src="js/signin.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
         <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js'></script>
+        <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
+
+        <script id="login-template" type="text/x-handlebars-template">
+            <div class='col s6'>
+          <h2 class="center-align">Login</h2>
+          <div>
+              <form class="col s12 form-signin">
+                  <div class="row">
+                      <div class="input-field col s12">
+                          <input id="email" type="email" name="email" class="validate">
+                          <label for="email">Email</label>
+                      </div>
+                      
+                  </div>
+                  <div class="row">
+                      <div class="input-field col s12">
+                          <input id="password" type="password" name="password" class="validate">
+                          <label for="password">Password</label>
+                      </div>
+                      
+                  </div>
+                  <div class="row">
+                      <div class="col s12">
+                          <p class="right-align">
+                              <button <a gotError="Materialize.toast('Incorrect Login',4000)" class="btn btn-large waves-effect waves-light" type="submit" name="action">Submit</button>
+                          </p>
+                      </div>
+                      
+                  </div>
+              </form>
+          </div>
+      </div>
+        </script>
+        <script id="welcome-template" type='text/x-handlebars-template'>
+          <h2>Welcome, {{email}}</h2>
+          <button class="btn btn-large waves-effect waves-light add-blog">Add a new Blog</button>
+          <button class="btn btn-large waves-effect waves-light logout">Log Out</button>
+      </script>
+      <script id="add-blog-template" type="text/x-handlebars-template">
+          <h2>Add a new Blog</h2>
+      <div class="row">
+          <form class="col s12 form-add-blog">
+              <div class="row">
+                  <div class="input-field col s12">
+                      <input id="title" type="text" name =" title">
+                      <label for="title">Title</label>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="input-field col s12">
+                      <textarea id="content" name =" content" class="materialize-textarea"></textarea>
+                      <label for="content">Content</label>
+                  </div>
+              </div>
+              <div class="row"> 
+                  <div class="col s12">
+                      <p class="right-align">
+                          <button class=" btn btn-large waves-effect waves-light" type="submit" name="action">Submit</button>
+                      </p>
+                  </div>     
+              </div>
+          </form>
+      </div>
+      </script>
     </body>
 </html>

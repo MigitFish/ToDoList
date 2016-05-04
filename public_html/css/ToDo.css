@@ -1,6 +1,10 @@
 .fancy {
     font-family: 'Kaushan Script', cursive;
-    font-size: 32px;
+    font-size: 22px;
+}
+.supa {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 48px;
 }
 body {
     display:  flex;
@@ -12,7 +16,7 @@ main{
 }
 .fancyier {
     font-family: 'Kaushan Script', cursive;
-    font-size: 64px;
+    font-size: 15px;
 }
 header{
     border-bottom: 5px solid black;
@@ -21,4 +25,16 @@ body{
     border-top: 5px solid black;
     border-left: 5px solid black;
     border-right: 5px solid black;
+}
+ /* blog stuff*/
+
+.blog-post-title {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.blog-post-meta {
+    margin-bottom: 5px;
+    color: #999;
+    font-style: italic;
 }
